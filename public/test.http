@@ -1,0 +1,26 @@
+POST http://127.0.0.1:5000/user/ HTTP/1.1
+content-type: application/json
+
+{
+    "id": "1"    
+}
+
+###
+
+GET http://127.0.0.1:5000/dir HTTP/1.1
+    ?path=Local_Access/Prod_DropBox/RaaghulU/A
+
+
+###
+
+POST http://127.0.0.1:5000/kickoff HTTP/1.1
+content-type: application/json
+
+{
+    "state" : "VA",
+    "brand" : "SAF",
+    "lob" : "H3",
+    "proposed_Date" : "22NOV2099",
+    "total_inf_records" : "100",
+    "total_quote_records" : "100"
+}

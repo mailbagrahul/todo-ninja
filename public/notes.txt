@@ -1,0 +1,22 @@
+<v-menu offset-y>
+                  <template #activator="{ on: menu }">
+                    <v-tooltip bottom>
+                      <template #activator="{ on: tooltip }">
+                        <v-btn
+                          flat
+                          class="grey--text text--darken-4"
+                          v-on="{ ...tooltip, ...menu }"
+                          @click="getProposedDates"
+                        >
+                          <v-icon left>expand_more</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>Existing dates</span>
+                    </v-tooltip>
+                  </template>
+                  <v-list>
+                    <v-list-tile v-for="(date, index) in dates" :key="index">
+                      <v-list-tile-title>{{ date }}</v-list-tile-title>
+                    </v-list-tile>
+                  </v-list>
+                </v-menu>
